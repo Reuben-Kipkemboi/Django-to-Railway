@@ -15,5 +15,10 @@
 - Django is a popular web framework used for building web applications, and with the rise of cloud hosting services, it has become easier to deploy and manage these applications. One such service is Railway.app, which provides a platform for deploying and hosting web applications quickly and easily. In this article, we will discuss how to deploy a Django app to Railway.app, including the steps to set up the environment, configure the app, and deploy it using the Railway CLI tool. We will also cover some tips and best practices for deploying Django apps to Railway.app.
 
 ## Installations and prerequisites
-Make sure your web app is ready for deployment.For django web app here are the common requirements that should be in your app environment.
+- Make sure your web app is ready for deployment.For django web app here are the common requirements that should be in your app environment.
+
+
+ <mark>DEBUG.</mark> This should be set as False in production (DEBUG = False). This stops the sensitive/confidential debug trace and variable information from being displayed.
+ 
+<mark>SECRET_KEY.</mark>This is a large random value used for CSRF protection, etc. It is important that the key used in production is not in source control or accessible outside the production server. 
 
