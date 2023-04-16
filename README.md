@@ -7,7 +7,7 @@
 
 + [Description](#description)
 + [Installations and prerequisites](#installations-and-prerequisites)
-+ [Technology Used](#technologies-used)
++ [Deployment](#deployment)
 + [License](#license)
 + [Authors Info](#authors-info)
 
