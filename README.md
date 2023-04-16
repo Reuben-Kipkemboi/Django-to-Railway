@@ -175,7 +175,14 @@ git push #works if you had added upstream. else git push origin main/master
 * At the end of this process, you may have to wait a few seconds before the page loads. While the page is loading, you may get a misleading “Bad Request (400)”. However, if you get “Server Error (500)”, it may be a database
 
 ###PostgreSQL
-- On Railway interface: Dashboard → Your Project → +New → Database → PostgreSQL → Variables
+- On Railway interface: Dashboard → Your Project → +New → Database
+![Database in Railway Dashboard](/Images/railway_project_add_database.png)
+
+- On Railway interface: Dashboard → Your Project → +New → Database → PostgreSQL
+![PostgreSQL Database in Railway Dashboard](/Images/railway_project_add_database_select_type.png)
+
+
+
 - Have the `DATABASE_URL` in your app variables.
 
 ####Migration
