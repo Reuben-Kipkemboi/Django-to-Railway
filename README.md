@@ -162,6 +162,20 @@ If you forms in your Django app protected by CSRF tokens, add the CSRF_TRUSTED_O
 
 *Commit the changes and push them into your GitHub repository!*
 
+```
+git status #listing the changes
+
+git add .
+
+git commit -m "ft:deployment - deploy to railway.app"
+
+git push #works if you had added upstream. else git push origin main/master
+
+
+```
+
+
+
 
 
 
