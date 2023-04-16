@@ -1,10 +1,8 @@
-## Django Web application with PostreSQL database deployment to  Railway.app
+## Django Web application with PostgreSQL database deployment to  Railway.app
 - Deployment of a django application with postgres database to railway.app
 
 **Our Road map**
 ![Project Roadmap](/Images/railway_app.webp)
-
-#### By Reuben Kipkemboi
 
 ## Table of Content
 
