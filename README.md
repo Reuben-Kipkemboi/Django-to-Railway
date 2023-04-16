@@ -171,8 +171,42 @@ git commit -m "ft:deployment - deploy to railway.app"
 
 git push #works if you had added upstream. else git push origin main/master
 
+```
+* At the end of this process, you may have to wait a few seconds before the page loads. While the page is loading, you may get a misleading “Bad Request (400)”. However, if you get “Server Error (500)”, it may be a database
+
+###PostgreSQL
+- On Railway interface: Dashboard → Your Project → +New → Database → PostgreSQL → Variables
+- Have the `DATABASE_URL` in your app variables.
+
+####Migration
+- Migrate my Django models into the production mode as well.
+Let's use the railway CLI
+*check hoe to install railway cli for your operating system*
+
+* For ubuntu users *
+
+`npm i -g @railway/cli`
+
+*You need to have => 16.x version of Node.js installed.*
+
+1. Railway authentication
+`railway login`
+
+2. Select your current project.
+
+`railway link → select the current project!`
+
+3. After that use well-known Python-Django commands for migrating models to the database.
 
 ```
+railway run python manage.py migrate
+railway run python manage.py createsuperuser
+
+```
+Project working :joy:
+
+https://<your-domain-name>.up.railway.app
+
 
 
 
