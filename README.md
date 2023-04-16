@@ -45,6 +45,18 @@ let's start commit process:
 
 * `git push origin main` or create an upstream by using the command `git push -u origin master/main`
 
+Briefly, this is it;
+
+```
+git init #Initialize git
+git remote add origin <new-github-repo-url> #Add remote origin, if you cloned the repo you will not add origin since it's already added.
+git add .
+git commit -m "st:project set-up - django-test web app deployment"
+git push -u origin main
+
+```
+
+
 
  <mark>DEBUG.</mark> This should be set as False in production (DEBUG = False). This stops the sensitive/confidential debug trace and variable information from being displayed.
  ```
@@ -67,9 +79,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&
 
 ```
 
-
 ### How Railway Works.
-
 
 - Each web application runs in its own isolated and independent virtualized container. Railway must be able to set up the appropriate environment and dependencies, as well as understand how your application is launched, in order to execute it. We provide this information in a number of text files for Django apps:
 
@@ -77,6 +87,60 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&
 requirements.txt: lists the Python dependencies needed for your site, including Django.
 - **Procfile**: A list of processes to be executed to start the web application. For Django this will usually be the Gunicorn web application server (with a .wsgi script).
 - **wsgi.py**: [WSGI](https://wsgi.readthedocs.io/en/latest/what.html) configuration to call our Django application in the Railway environment.
+
+## Deployment.
+### Install your requirements from the requirements.txt file
+
+*  ` pip install -r requirements.txt` or `pipenv install -r requirements.txt`
+### Environment variables 
+
+-If you are using a different .env file.
+
+### Database
+
+* PostgreSQL database for local development and in production as well.
+
+```
+psql -U postgres
+(type your password!)
+create database <database-name> with owner postgres;
+\q (quit)
+
+```
+
+For production, Use the `dj_database_url` utility to authenticate the Postgres database. 
+
+Test my project on localhost.
+
+```
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py createsuperuser
+python3 manage.py runserver
+
+```
+Go to `http://127.0.0.1:8000/` on your browser.
+
+### The Procfile!
+
+* `web: gunicorn config.wsgi`
+
+### runtime.txt 
+* Which has to include the Python version.e.g..
+* `python-3.x.x`
+
+### Commit to github
+
+```
+git init #Initialize git
+git remote add origin <new-github-repo-url> #Add remote origin, if you cloned the repo you will not add origin since it's already added.
+git add .
+git commit -m "st:project set-up - django-test web app deployment"
+git push -u origin main
+
+```
+
+
 
 
 
