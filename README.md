@@ -147,6 +147,21 @@ git push -u origin main
 **Creating project in Railway Dashboard**
 ![Creating project in Railway Dashboard, the Linux mascot](/Images/new_project.png)
 
+3. Deploy from GitHub repo → Add variables:
+
+* You can add here other environment variables required for your project.
+
+*In Railway interface (Your project → Settings), you can add a custom domain name*.
+
+Then, don’t forget to update the settings.py with the hostname!
+
+`ALLOWED_HOSTS = [ “<your-domain-name>.up.railway.app”, ]`
+If you forms in your Django app protected by CSRF tokens, add the CSRF_TRUSTED_ORIGINS with the url of the Railway project to the bottom of the settings.py file. Without this, you might have issues later.
+
+`CSRF_TRUSTED_ORIGINS = [ „https://<your-domain-name>.up.railway.app” ]`
+
+*Commit the changes and push them into your GitHub repository!*
+
 
 
 
