@@ -16,6 +16,15 @@
 
 ## Installations and prerequisites
 - Make sure your web app is ready for deployment.For django web app here are the common requirements that should be in your app environment.
+when I talk of ready, I mean have your application on a github repository.If not worry less.
+1. First go to [Github](https://github.com/)  and create your account.
+2. Once you are logged in, click the + link in the top toolbar and select New repository.
+* Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
+* Enter a new repository name and description. For example, you might use the name "django_test" and description "First web_app deployed to railway.app".
+* Choose Python in the Add .gitignore selection list.
+* Choose your preferred license in the Add license selection list.
+* Check Initialize this repository with a README.
+3. Press Create repository.
 
 
  <mark>DEBUG.</mark> This should be set as False in production (DEBUG = False). This stops the sensitive/confidential debug trace and variable information from being displayed.
@@ -49,4 +58,6 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&
 requirements.txt: lists the Python dependencies needed for your site, including Django.
 - **Procfile**: A list of processes to be executed to start the web application. For Django this will usually be the Gunicorn web application server (with a .wsgi script).
 - **wsgi.py**: [WSGI](https://wsgi.readthedocs.io/en/latest/what.html) configuration to call our Django application in the Railway environment.
+
+
 
