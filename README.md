@@ -25,6 +25,25 @@ when I talk of ready, I mean have your application on a github repository.If not
 * Choose your preferred license in the Add license selection list.
 * Check Initialize this repository with a README.
 3. Press Create repository.
+4. Now push your local application to the repository or clone the repository to your local computer and start pushing code remotely.
+5. Open a command prompt/terminal and use the add command to add all files to git. This adds the files which aren't ignored by the .gitignore file to the "staging area".
+
+let's start commit process:
+
+1. `git add -A`or `git add . `or `git add *`
+2. Use the status command to check that all files you are about to commit are correct (you want to include source files, not binaries, temporary files etc.). 
+
+* `git status`
+
+3. When you're satisfied, commit the files to your local repo.
+
+* ` git commit -m "st:project set-up - django-test web app deployment"`
+
+- N/B *look at this [Repository](https://github.com/Reuben-Kipkemboi/git-conventions) for more git commit conventions.You can clone it to use later*
+
+4. At this point, the remote repo has not been changed. The last step is to synchronize (push) your local repo up to the remote GitHub repo using the following command:
+
+* `git push origin main` or create an upstream by using the command `git push -u origin master/main`
 
 
  <mark>DEBUG.</mark> This should be set as False in production (DEBUG = False). This stops the sensitive/confidential debug trace and variable information from being displayed.
