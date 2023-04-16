@@ -1,6 +1,9 @@
 ## Django Web application with PostreSQL database deployment to  Railway.app
 - Deployment of a django application with postgres database to railway.app
 
+**Our Road map**
+![Project Roadmap](/Images/railway_app.webp)
+
 #### By Reuben Kipkemboi
 
 ## Table of Content
@@ -139,6 +142,12 @@ git commit -m "st:project set-up - django-test web app deployment"
 git push -u origin main
 
 ```
+### Deploy to railway
+
+1. Register and login to Railway (I logged in with my Github.)
+2. On Railway interface: Dashboard → +New →
+**Creating project in Railway Dashboard**
+![Creating project in Railway Dashboard, the Linux mascot](/Images/new_project.png)
 
 
 
