@@ -9,6 +9,7 @@
 + [Description](#description)
 + [Installations and prerequisites](#installations-and-prerequisites)
 + [Deployment](#deployment)
++ [References](#references)
 + [License](#license)
 + [Authors Info](#authors-info)
 
@@ -174,7 +175,7 @@ git push #works if you had added upstream. else git push origin main/master
 ```
 * At the end of this process, you may have to wait a few seconds before the page loads. While the page is loading, you may get a misleading “Bad Request (400)”. However, if you get “Server Error (500)”, it may be a database
 
-###PostgreSQL
+### PostgreSQL
 - On Railway interface: Dashboard → Your Project → +New → Database
 ![Database in Railway Dashboard](/Images/railway_project_add_database.png)
 
@@ -185,7 +186,7 @@ git push #works if you had added upstream. else git push origin main/master
 
 - Have the `DATABASE_URL` in your app variables.
 
-####Migration
+#### Migration
 - Migrate my Django models into the production mode as well.
 Let's use the railway CLI
 *check hoe to install railway cli for your operating system*
@@ -214,6 +215,46 @@ Project working :joy:
 
 https://<your-domain-name>.up.railway.app
 
+
+## References
+
++ [mdn web_docs](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment)
+
++ [Medium](https://medium.com/@grbeno/deploying-django-project-from-heroku-to-railway-8ce65bf5c44)
+
++ [Devto community](https://dev.to/mr_destructive/django-postgresql-deployment-on-railway-app-d54)
+
++ [Railway](https://docs.railway.app/develop/cli)
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Authors Info
+
+Reuben Kipkemboi
+
+<div id="site-badges" align="start">
+  <a href="https://www.linkedin.com/in/reuben-kipkemboi/">
+    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+  <a href="https://mail.google.com/mail">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/>
+  </a>
+  <a href="https://twitter.com/_RotichReuben">
+    <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter"/>
+  </a>
+  <a href="https://github.com/Reuben-Kipkemboi/Reuben-Kipkemboi">
+  <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=blue" alt= "Github" />
+  </a>
+
+  
+</div>
+
+
+
+
+[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
 
 
 
